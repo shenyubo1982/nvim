@@ -1,0 +1,16 @@
+
+coc-settings.json
+coc-vimrc
+.netrwhist
+colors/*
+autoload/*
+pack/*
+plugged/*
+plugin/*
+snapshorts/*
+vimrc
+
+
+
+# Mac OS
+**/.DS_Store
