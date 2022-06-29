@@ -6,13 +6,15 @@ require("plugins")
 require("keybindings")
 -- 主题设置
 require("colorscheme")
--- 插件配置
+-- 插件配置 ./lua/plugin-config/plugName.lua
 require("plugin-config.nvim-tree")
 require("plugin-config.bufferline")
 require("plugin-config.lualine")
 require("plugin-config.telescope")
 require("plugin-config.dashboard")
 require("plugin-config.project")
-
+require("plugin-config.nvim-treesitter")
+-- 内置LSP (新增) ./lua/lsp/setup.lua
+require("lsp.setup")
 
 
