@@ -14,7 +14,10 @@ require("plugin-config.telescope")
 require("plugin-config.dashboard")
 require("plugin-config.project")
 require("plugin-config.nvim-treesitter")
--- 内置LSP (新增) ./lua/lsp/setup.lua
+require("plugin-config.indent-blankline")
+-- 内置LSP  ./lua/lsp/setup.lua
 require("lsp.setup")
-
+require("lsp.cmp")
+require("lsp.ui")
+require("lsp.null-ls")
 

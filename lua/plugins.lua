@@ -38,6 +38,27 @@ packer.startup(
     use({ "williamboman/nvim-lsp-installer", commit = "36b44679f7cc73968dbb3b09246798a19f7c14e0" })
     -- Lspconfig
     use({ "neovim/nvim-lspconfig" })
+    -- 补全引擎
+    use("hrsh7th/nvim-cmp")
+    -- snippet 引擎
+    use("hrsh7th/vim-vsnip")
+    -- 补全源
+    use("hrsh7th/cmp-vsnip")
+    use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
+    use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
+    use("hrsh7th/cmp-path") -- { name = 'path' }
+    use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+    -- 常见编程语言代码段
+    use("rafamadriz/friendly-snippets")
+    -- wakatime 工作时间采集
+    use 'wakatime/vim-wakatime'
+    -- ui
+    use("onsails/lspkind-nvim")
+    -- indent-blankline
+    use("lukas-reineke/indent-blankline.nvim")
+    -- 代码格式化
+    -- use("mhartington/formatter.nvim")
+    use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
     -------------------------------------------------------
 end)
 
