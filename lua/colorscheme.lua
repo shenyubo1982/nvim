@@ -1,6 +1,6 @@
---local colorscheme = "tokyonight"
+local colorscheme = "tokyonight"
 --local colorscheme = "OceanicNext"
-local colorscheme = "gruvbox"
+-- local colorscheme = "gruvbox"
 --local colorscheme = "zephyr"
 --local colorscheme = "nord"
 --local colorscheme = "onedark"
