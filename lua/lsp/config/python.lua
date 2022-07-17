@@ -1,20 +1,21 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua
 local runtime_path = vim.split(package.path, ";")
-print(runtime_path)
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
+print(table)
 
 local opts = {
 	settings = {
-		gopls = {
-			analyses = {
-				unusedparams = true,
+		python = {
+			analysis = {
+				autoSearchPaths = true,
+				diagnosticMode = "workspace",
+				useLibraryCodeForTypes = true,
 			},
-			staticcheck = true,
 		},
 	},
-	cmd = { "gopls", "serve" },
-	filetypes = { "go", "gomod" },
+	-- cmd = { "pyright-langserver", "--stdio" },
+	filetypes = { "python" },
 	--root_pattern("go.work", "go.mod", ".git"),
 
 	-- flags = {
@@ -32,24 +33,6 @@ local opts = {
 		require("keybindings").mapLSP(buf_set_keymap)
 		-- 保存时自动格式化
 		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-		-- Imports (To get your imports ordered on save, like goimports does, you can define a helper function in Lua:)
-		-- local function OrgImports(wait_ms)
-		-- 	local params = vim.lsp.util.make_range_params()
-		-- 	params.context = { only = { "source.organizeImports" } }
-		-- 	local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, wait_ms)
-		-- 	for _, res in pairs(result or {}) do
-		-- 		for _, r in pairs(res.result or {}) do
-		-- 			if r.edit then
-		-- 				vim.lsp.util.apply_workspace_edit(r.edit, "UTF-8")
-		-- 			else
-		-- 				vim.lsp.buf.execute_command(r.command)
-		-- 			end
-		-- 		end
-		-- 	end
-		-- end
-
-		-- Omnifunc
-		-- vim.cmd("autocmd FileType go setlocal omnifunc=v:lua.vim.lsp.omnifunc")
 	end,
 }
 

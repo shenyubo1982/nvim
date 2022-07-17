@@ -60,6 +60,12 @@ packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 	-- 注释器
 	use("numToStr/Comment.nvim")
+	-- go.vim
+	-- use("ray-x/go.nvim")
+	-- use("ray-x/guihua.lua") -- recommanded if need floating window support
+  -- autopairs(自动补充括号)
+  use({ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }) -- Autopairs, integrates with both cmp and treesitter
+
 	-------------------------------------------------------
 end)
 

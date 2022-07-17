@@ -16,6 +16,7 @@ require("plugin-config.project")
 require("plugin-config.nvim-treesitter")
 require("plugin-config.indent-blankline")
 require("plugin-config.comment")
+require("plugin-config.autopairs")
 -- 内置LSP  ./lua/lsp/setup.lua
 require("lsp.setup")
 require("lsp.cmp")
